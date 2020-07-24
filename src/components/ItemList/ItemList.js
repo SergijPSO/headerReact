@@ -1,46 +1,13 @@
-import React from 'react';
-import "../ItemMenu/ItemMenu.css"
+import React from 'react'
 
-function ItemList(props) {
+import ItemMenu from '../ItemMenu/ItemMenu'
 
-  const menuItems = [
-    {
-      name: "Home",
-      id:''
-    },
-    {
-      name: "About Us",
-      id:''
-    },
-    {
-      name: "Services",
-      id:''
-    },
-    {
-      name: "Contacts",
-      id:''
-    }
-
-  ];
-
-  let key= 0;
-
-   function handleClick(e) {
-    e.preventDefault();
-    console.log('jkjkjk');
+class itemList extends React.Component {
+  render(){
+    return(
+      <ItemMenu />
+    )
   }
-
-  return(
-    <div className="header-menu">
-      {
-        menuItems.map(el => {
-          return(
-            <p className="menu-item" key={key++} onClick={handleClick}> {el.name}</p>
-          )
-        })
-      }
-    </div>
-  )
 }
 
-export default ItemList
+export default itemList

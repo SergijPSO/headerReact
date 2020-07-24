@@ -1,12 +1,17 @@
 import React from 'react';
 import ItemList from '../ItemList/ItemList';
-
 import './Header.css';
 
-function Header(props){
-  return <ItemList />
+class Header extends React.Component {
+
+  render() {
+
+    return(
+      <nav className="header-menu" >
+        <ItemList />
+      </nav>
+    )
+  }
 }
 
-
-export default Header
-
+export default Header;
