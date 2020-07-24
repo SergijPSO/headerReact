@@ -1,3 +1,4 @@
+
 const headerMenuItems = [
   {
     name: "Home",
@@ -17,3 +18,5 @@ const headerMenuItems = [
   }
 
 ];
+
+export default headerMenuItems
