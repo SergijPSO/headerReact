@@ -1,0 +1,12 @@
+.header-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background: #8080801f;
+    -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.45);
+    -moz-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.45);
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.45);
+}
+

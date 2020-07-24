@@ -1,0 +1,15 @@
+.menu-item,
+.active-item {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: "Roboto Light", sans-serif;
+}
+
+.active-item {
+    color: green;
+}
+
+.menu-item {
+    color:#9c27b080;
+}
