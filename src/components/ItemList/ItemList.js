@@ -23,21 +23,22 @@ function ItemList(props) {
 
   ];
 
-
   let key= 0;
+
+   function handleClick(e) {
+    e.preventDefault();
+    console.log('jkjkjk');
+  }
 
   return(
     <div className="header-menu">
-
-      {menuItems.map(el => {
-        return(
-          <p className="menu-item" key = {key++}>{el.name}</p>
-        )
-
-      })}
-    })
-
-
+      {
+        menuItems.map(el => {
+          return(
+            <p className="menu-item" key={key++} onClick={handleClick}> {el.name}</p>
+          )
+        })
+      }
     </div>
   )
 }
