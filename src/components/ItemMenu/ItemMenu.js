@@ -1,43 +1,10 @@
 import React from 'react';
-
 import './ItemMenu.css'
 
+function ItemMenu(props) {
 
-class ItemMenu extends React.Component {
+ return  console.log(props)
 
-  constructor(props){
-    super(props)
-
-    this.state = {
-      isActive: false
-    }
-
-  }
-
-  handleClick = () => {
-    this.setState(state=> ({
-      isActive: !state.isActive
-    }));
-  }
-
-  render() {
-    let key = 0;
-
-    let className = this.props.className;
-
-    return(
-
-      this.props.itemsArr.map(item => {
-
-        (!this.state.isActive) ? className = this.props.className : className = "active-item";
-
-          return(
-          <span className={className} key={key++} onClick={this.handleClick}>{item.name}</span>
-
-        )
-      })
-    )
-  }
 }
 
-export default ItemMenu
+export default ItemMenu;
