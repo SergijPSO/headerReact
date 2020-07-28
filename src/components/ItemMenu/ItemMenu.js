@@ -2,20 +2,30 @@ import React from 'react';
 import './ItemMenu.css'
 
 class itemMenu extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isActive: false
+        }
+    }
 
     handleClick = () => {
-        console.log('wweww')
+        this.setState( {
+            isActive: !this.state.isActive
+        })
     }
 
     render(){
+        let currentClass = 'menu-item';
 
-        let k = 0;
+      if (this.state.isActive) {
+        currentClass += ' active-item';
+      }
+
         return(
-          this.props.headerItems.map(el => {
-              return <span className="menu-item" onClick={this.handleClick} key = {k++}>{el.name}</span>
-          })
-
+           <span className={currentClass} onClick={this.handleClick}>{this.props.name}</span>
         )
+
     }
 }
 

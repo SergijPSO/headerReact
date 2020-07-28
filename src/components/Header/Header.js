@@ -1,12 +1,12 @@
 import React from 'react';
-import ItemList from '../ItemList/ItemList';
+import ItemList from '../ItemsList/ItemList';
 import './Header.css';
 
 class Header extends React.Component {
 
   render() {
     return(
-      <nav className="header-menu" >
+      <nav className="header-menu">
         <ItemList/>
       </nav>
     )
