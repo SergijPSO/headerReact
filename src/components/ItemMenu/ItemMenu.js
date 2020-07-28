@@ -9,18 +9,18 @@ class itemMenu extends React.Component {
         }
     }
 
-    handleClick = () => {
-        this.setState( {
-            isActive: !this.state.isActive
-        })
-    }
+    // handleClick = () => {
+    //     this.setState( {
+    //         isActive: !this.state.isActive
+    //     })
+    // }
 
     render(){
         let currentClass = 'menu-item';
 
-      if (this.state.isActive) {
-        currentClass += ' active-item';
-      }
+      // if (this.state.isActive) {
+      //   currentClass += ' active-item';
+      // }
 
         return(
            <span className={currentClass} onClick={this.handleClick}>{this.props.name}</span>

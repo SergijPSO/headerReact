@@ -6,7 +6,7 @@
     font-family: "Roboto Light", sans-serif;
 }
 
-.menu-item.active-item{
+.menu-item:hover {
     color: green;
 }
 

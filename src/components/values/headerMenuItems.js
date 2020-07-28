@@ -1,4 +1,4 @@
-export const HeaderMenuItems = [
+export const headerMenuItems = [
   {
     name: "Home",
     id:''
