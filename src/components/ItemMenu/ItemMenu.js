@@ -23,7 +23,7 @@ class itemMenu extends React.Component {
       // }
 
         return(
-           <span className={currentClass} onClick={this.handleClick}>{this.props.name}</span>
+           <span className={currentClass}>{this.props.name}</span>
         )
 
     }
