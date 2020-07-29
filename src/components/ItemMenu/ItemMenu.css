@@ -6,6 +6,7 @@
     font-family: "Roboto Light", sans-serif;
 }
 
+.menu-item.active-item,
 .menu-item:hover {
     color: green;
 }
@@ -13,3 +14,4 @@
 .menu-item {
     color:#9c27b080;
 }
+
