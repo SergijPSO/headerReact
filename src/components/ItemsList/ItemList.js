@@ -8,24 +8,34 @@ class ItemsList extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      isActive: false
+      isActive: false,
+      id: ''
     }
+
   }
 
-  handleClick = () => {
-    this.setState( {
-      isActive: !this.state.isActive
-    })
-  }
+  // handleClick = () => {
+  //   this.setState(
+  //     isActive: !this.state.isActive
+  //   })
+  // }
 
   render(){
 
     return(
       headerMenuItems.map((el, i) => {
-        return <ItemMenu clickEvent ={this.handleClick} status = {this.state} key={i++} headerItems={headerMenuItems} name={el.name} />
+          return <ItemMenu
+          // clickEvent ={this.handleClick}
+          status = {this.state}
+          key={i++}
+          headerItems={headerMenuItems}
+          name={el.name}
+          id={el.id}
+        />
       })
     )
   }
+
 }
 
 export default ItemsList

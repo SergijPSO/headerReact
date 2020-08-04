@@ -1,19 +1,19 @@
 export const headerMenuItems = [
   {
     name: "Home",
-    id:''
+    id:1
   },
   {
     name: "About Us",
-    id:''
+    id:2
   },
   {
     name: "Services",
-    id:''
+    id:3
   },
   {
     name: "Contacts",
-    id:''
+    id:4
   }
 
 ];

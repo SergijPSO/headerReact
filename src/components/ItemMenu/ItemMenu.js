@@ -2,17 +2,15 @@ import React from 'react';
 import './ItemMenu.css'
 
 class itemMenu extends React.Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         isActive: false
-    //     }
-    // }
+
+    clickEvent = () => {
+      this.setState( {
+        id: this.props.id
+      })
+      // console.log(this.props.id)
+    }
 
     render(){
-
-          // console.log(this.handleClick)
-        // console.log(this.props.status.isActive);
 
       let currentClass = 'menu-item';
 
@@ -21,7 +19,12 @@ class itemMenu extends React.Component {
       }
 
       return(
-         <span className={currentClass} onClick={this.props.clickEvent}>{this.props.name}</span>
+         <span
+           className={currentClass}
+           onClick={this.clickEvent}
+         >
+           {this.props.name}
+         </span>
       )
 
     }
