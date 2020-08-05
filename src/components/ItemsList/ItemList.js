@@ -8,13 +8,13 @@ class ItemsList extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      id: '0'
+      id: null
     }
   }
 
-  handleClick = (...id) => {
+  handleClick = (id) => {
     this.setState({
-        id: Number(id)
+        id: id
     })
   }
 
@@ -25,7 +25,7 @@ class ItemsList extends React.Component {
         let elementClass = 'menu-item'
 
         if(el.id === this.state.id ) {
-          console.log(el);
+
           elementClass = elementClass +  ' active-item';
         }
 
