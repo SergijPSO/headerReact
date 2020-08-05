@@ -3,31 +3,21 @@ import './ItemMenu.css'
 
 class itemMenu extends React.Component {
 
-    clickEvent = () => {
-      this.setState( {
-        id: this.props.id
-      })
-      // console.log(this.props.id)
-    }
+  clickEvent = () => {
+    this.props.clickEvent(this.props.id)
+  }
 
-    render(){
+  render(){
 
-      let currentClass = 'menu-item';
-
-      if (this.props.status.isActive) {
-        currentClass += ' active-item';
-      }
-
-      return(
-         <span
-           className={currentClass}
-           onClick={this.clickEvent}
-         >
+    return(
+      <span
+        className={this.props.className}
+        onClick={this.clickEvent}
+      >
            {this.props.name}
-         </span>
-      )
-
-    }
+      </span>
+    )
+  }
 }
 
 export default itemMenu

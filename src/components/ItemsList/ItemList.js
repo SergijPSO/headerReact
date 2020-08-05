@@ -8,30 +8,37 @@ class ItemsList extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      isActive: false,
-      id: ''
+      id: '0'
     }
-
   }
 
-  // handleClick = () => {
-  //   this.setState(
-  //     isActive: !this.state.isActive
-  //   })
-  // }
+  handleClick = (...id) => {
+    this.setState({
+        id: Number(id)
+    })
+  }
 
   render(){
-
     return(
       headerMenuItems.map((el, i) => {
-          return <ItemMenu
-          // clickEvent ={this.handleClick}
+
+        let elementClass = 'menu-item'
+
+        if(el.id === this.state.id ) {
+          console.log(el);
+          elementClass = elementClass +  ' active-item';
+        }
+
+        return(
+          <ItemMenu
+          className ={elementClass}
+          clickEvent ={this.handleClick}
           status = {this.state}
           key={i++}
           headerItems={headerMenuItems}
           name={el.name}
           id={el.id}
-        />
+        />)
       })
     )
   }
