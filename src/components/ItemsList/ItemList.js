@@ -21,17 +21,9 @@ class ItemsList extends React.Component {
   render(){
     return(
       headerMenuItems.map((el, i) => {
-
-        let elementClass = 'menu-item'
-
-        if(el.id === this.state.id ) {
-
-          elementClass = elementClass +  ' active-item';
-        }
-
         return(
           <ItemMenu
-          className ={elementClass}
+          className = {`menu-item ${el.id === this.state.id ? ' active-item' : ''} `}
           clickEvent ={this.handleClick}
           status = {this.state}
           key={i++}
