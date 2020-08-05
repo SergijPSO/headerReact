@@ -2,6 +2,7 @@ import React from 'react'
 
 import ItemMenu from '../ItemMenu/ItemMenu'
 import {headerMenuItems} from "../values/headerMenuItems";
+import classNames from 'classnames';
 
 class ItemsList extends React.Component {
 
@@ -23,7 +24,7 @@ class ItemsList extends React.Component {
       headerMenuItems.map((el, i) => {
         return(
           <ItemMenu
-          className = {`menu-item ${el.id === this.state.id ? ' active-item' : ''} `}
+          className = {classNames('menu-item', el.id === this.state.id ? ' active-item' : '')}
           clickEvent ={this.handleClick}
           status = {this.state}
           key={i++}
