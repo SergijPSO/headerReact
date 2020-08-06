@@ -1,7 +1,7 @@
 import React from 'react';
 import './ItemMenu.css'
 
-class itemMenu extends React.Component {
+class ItemMenu extends React.Component {
 
   clickEvent = () => {
     this.props.clickEvent(this.props.id)
@@ -20,4 +20,4 @@ class itemMenu extends React.Component {
   }
 }
 
-export default itemMenu
+export default ItemMenu
