@@ -6,10 +6,11 @@
     font-family: "Roboto Light", sans-serif;
 }
 
-.active-item {
+.menu-item.active-item {
     color: green;
 }
 
 .menu-item {
     color:#9c27b080;
 }
+
