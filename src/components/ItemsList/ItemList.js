@@ -24,7 +24,7 @@ class ItemsList extends React.Component {
       headerMenuItems.map((el, i) => {
         return(
           <ItemMenu
-          className = {classNames('menu-item', el.id === this.state.id ? ' active-item' : '')}
+          className = {classNames({'menu-item': true, 'active-item': el.id === this.state.id})}
           clickEvent ={this.handleClick}
           status = {this.state}
           key={i++}
